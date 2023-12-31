@@ -1,6 +1,6 @@
 # NewYearWeb
 Chinese New Year Celebration Website
 
-Main NewYear.html
+Main index.html
 
 Html+CSS
