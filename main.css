@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    display: block;
+}
+
+.dpf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-item {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fullweb {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-container {
+    position: relative;
+    height: 100vh;
+    top: 0;
+    transition: all .6s ease;
+    touch-action: none;
+}
+.page1 {
+    background-image: radial-gradient(#9a281f, #bc291c);
+    perspective-origin: 20% center;
+    z-index: 1;
+    position: relative;
+    perspective: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.long {
+    position: absolute;
+    transition: 2s;
+    bottom: -5px;
+    height: 500px;
+    right: -13px;
+    pointer-events: none;
+    animation: longAnimation 4s ease-in-out infinite;
+}
+
+.righttopimg {
+    position: absolute;
+    top: 0;
+    height: 600px;
+    right: -15px;
+    animation: rbAnimation 4s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.yuandanimg {
+    position: absolute;
+    top: 6%;
+    right: 50%;
+    transition: 2s;
+    transform: translateY(0) translateX(50%);
+    animation: TYAnimation 4s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.JSimg {
+    height: 60%;
+    opacity: 0;
+    bottom: 55px;
+    transition: all .5s;
+    position: absolute;
+}
+
+.jstitle {
+    display: flex;
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 213px);
+    transition: .8s;
+}
+
+.titlesec {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.giftimg {
+    position: absolute;
+    bottom: 23px;
+    height: 650px;
+    left: -13px;
+    animation: giftAnimation 4s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.botttomclludimg {
+    position: absolute;
+    bottom: -10px;
+    height: 220px;
+    left: -13px;
+    pointer-events: none;
+    animation: bcAnimation 4s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes rbAnimation {
+    0% {
+        right: -10px;
+    }
+
+    50% {
+        right: 0;
+    }
+
+    100% {
+        right: -10px;
+    }
+}
+
+@keyframes qqAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes TYAnimation {
+    0% {
+        transform: translateY(0) translateX(50%);
+    }
+
+    50% {
+        transform: translateY(10px) translateX(50%);
+    }
+
+    100% {
+        transform: translateY(0) translateX(50%);
+    }
+}
+
+@keyframes bcAnimation {
+    0% {
+        bottom: -10px;
+        left: -13px;
+    }
+
+    50% {
+        bottom: 0px;
+        left: -15px;
+    }
+
+    100% {
+        bottom: -10px;
+        left: -13px;
+    }
+}
+
+@keyframes giftAnimation {
+    0% {
+        bottom: 23px;
+        left: -13px;
+    }
+
+    50% {
+        bottom: 16px;
+        left: 0;
+    }
+
+    100% {
+        bottom: 23px;
+        left: -13px;
+    }
+}
+
+@keyframes longAnimation {
+    0% {
+        bottom: -5px;
+    }
+
+    50% {
+        bottom: 10px;
+    }
+
+    100% {
+        bottom: -5px;
+    }
+}
+
+@keyframes s2024Animation {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -5px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.yanhua2 {
+    position: absolute;
+    bottom: 80px;
+    width: 280px;
+    height: 280px;
+    right: 40px;
+}
+
+.denglongtop {
+    position: absolute;
+    top: 0;
+    left: calc(50vw - 250px);
+    width: 500px;
+    transition: 1.5s;
+    animation: qqAnimation 4s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.s2024 {
+    position: absolute;
+    top: 0;
+    height: 200px;
+    left: 20px;
+    transition: .8s;
+    animation: s2024Animation 4s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.denglongright {
+    position: fixed;
+    width: 280px;
+    height: 280px;
+    right: 0;
+}
+
+.bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubble-container .bubble {
+    position: absolute;
+    bottom: -10rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    opacity: .5;
+    animation: rise 10s infinite ease;
+}
+
+.bubble-container .bubble-1 {
+    width: 4rem;
+    height: 4rem;
+    left: 10%;
+    animation: 8s;
+}
+
+.bubble-container .bubble-2 {
+    width: 2rem;
+    height: 2rem;
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.bubble-container .bubble-3 {
+    width: 5rem;
+    height: 5rem;
+    left: 35%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.bubble-container .bubble-4 {
+    width: 8rem;
+    height: 8rem;
+    left: 50%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+
+.bubble-container .bubble-5 {
+    width: 3.5rem;
+    height: 3，5rem;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.bubble-container .bubble-6 {
+    width: 4.5rem;
+    height: 4，5rem;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+.bubble-container .bubble-7 {
+    width: 9rem;
+    height: 9rem;
+    left: 75%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.bubble-container .bubble-8 {
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+
+@keyframes rise {
+    0% {
+        bottom: -10rem;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translate(10rem);
+    }
+
+    100% {
+        bottom: 1080px;
+        transform: translateX(-20rem);
+    }
+}
